@@ -1,11 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const tiles = document.querySelectorAll('.tile');
+    const randomTile = document.getElementById('random-img');
 
-    tiles.forEach(tile => {
-        tile.addEventListener('click', () => {
-            console.log('Tile clicked'); // This will log a message when a tile is clicked
-            const cross = tile.querySelector('.cross');
-            cross.classList.toggle('show');
-        });
-    });
+    // Generate a random image for the random tile
+    const randomIndex = Math.floor(Math.random() * 64) + 1;
+    randomTile.src = `character (${randomIndex}).png`;
+    console.log(`Random image set to character (${randomIndex}).png`);
 });

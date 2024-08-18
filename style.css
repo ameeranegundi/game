@@ -9,11 +9,14 @@ body {
 }
 
 #game-container {
-    width: 80vmin;
-    height: 80vmin;
+    width: 70vmin;
+    height: 70vmin;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 .tile {
@@ -42,7 +45,7 @@ body {
     display: none;
     justify-content: center;
     align-items: center;
-    font-size: 3rem; /* Adjust size as needed */
+    font-size: 3rem;
     color: white;
 }
 
@@ -51,6 +54,23 @@ body {
 }
 
 .cross::before {
-    content: '✖'; /* Unicode for cross mark */
+    content: '✖';
 }
 
+#random-tile {
+    position: absolute;
+    top: -10vmin;
+    right: 5vmin;
+    width: 10vmin;
+    height: 10vmin;
+    background-color: white;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+#random-tile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
