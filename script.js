@@ -4,15 +4,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // Set up click event for each tile
     tiles.forEach(tile => {
         tile.addEventListener('click', () => {
-            const cross = tile.querySelector('.cross');
-            cross.classList.toggle('show');
-        });
-
-        // Handle touch events for mobile devices
-        tile.addEventListener('touchstart', (e) => {
-            e.preventDefault(); // Prevent default touch behavior
-            const cross = tile.querySelector('.cross');
-            cross.classList.toggle('show');
+            const img = tile.querySelector('img');
+            img.style.opacity = '0';  // Hide the image
+            tile.style.backgroundColor = 'black';  // Set background color to black
         });
     });
 
